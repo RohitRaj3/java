@@ -1,0 +1,36 @@
+
+Write a program to find x to the power n (i.e. x^n). Take x and n from the user. You need to print the answer.
+Note : For this question, you can assume that 0 raised to the power of 0 is 1
+
+.......................................................................................................................................................
+
+import java.util.Scanner;
+
+public class Solution {
+    
+    public static void main(String[] args) {
+        // Write your code here
+        int x,n;
+        Scanner sc = new Scanner(System.in);
+        x = sc.nextInt();
+        n = sc.nextInt();
+        
+        int p=1;
+          for(int i=1;i<=n;i++)
+          {
+               p=p*x;
+          }
+          System.out.println(p);
+          
+                                                   // below this is a easy to understand code for new commer but it will give inly 66% true result
+        // if(x==0 && n==1){                                               
+        //     System.out.println(0);
+        // }
+        // else if(x==0 || n==0){
+        //     System.out.println(1);
+        // }else{
+        // System.out.println(x^n);
+        // }
+        
+    }
+}
