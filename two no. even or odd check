@@ -1,0 +1,22 @@
+package EvenOdd;
+
+import java.util.Scanner;
+
+public class evenOdd {
+
+		public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			int a,b;
+			Scanner sc = new Scanner(System.in);
+			a = sc.nextInt();
+			b = sc.nextInt();
+			
+			if(a%2 == 0) {
+				System.out.println(a +" is even");
+			} if(b%2 == 0) {
+				System.out.println(b +"is even");
+			}
+			
+		}
+
+}
