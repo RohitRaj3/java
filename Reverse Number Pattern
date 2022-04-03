@@ -1,0 +1,71 @@
+Code : Reverse Number Pattern
+Send Feedback
+Print the following pattern for the given N number of rows.
+Pattern for N = 4
+1
+21
+321
+4321
+Input format :
+Integer N (Total no. of rows)
+Output format :
+Pattern in N lines
+
+...............................................................................................................
+
+import java.util.Scanner;
+
+public class Solution {
+
+
+	public static void main(String[] args) {
+		
+		/* Your class should be named Solution.
+	 	* Read input as specified in the question.
+	 	* Print output as specified in the question.
+		*/
+        int n;
+			Scanner sc = new Scanner(System.in);
+			n = sc.nextInt();
+			
+        int i = 1;
+        while(i<=n){
+            int p = 1;
+            int j = i;
+            while(j>=1){
+                System.out.print(j);
+                j = j-1;
+                
+            }
+            System.out.println();
+            i = i+1;
+        }
+			
+			
+		
+	}
+
+}
+
+
+.............................................................
+
+OUTPUT -----------------------------
+
+Custom Test Case
+4
+
+EXECUTE
+
+Result
+Your Output
+1
+21
+321
+4321
+
+Expected Output
+1
+21
+321
+4321
