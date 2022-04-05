@@ -1,0 +1,63 @@
+Code : Triangle of Numbers
+Send Feedback
+Print the following pattern for the given number of rows.
+Pattern for N = 4
+
+
+
+The dots represent spaces.
+
+
+
+Input format :
+Integer N (Total no. of rows)
+Output format :
+Pattern in N lines
+
+
+..................................................................................................................
+
+import java.util.Scanner;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		/* Your class should be named Solution.
+	 	* Read input as specified in the question.
+	 	* Print output as specified in the question.
+		*/
+        
+        int n;
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        
+        int i=1;
+        while(i<=n){
+            int sp=1;
+            while(sp<=n-i){
+                System.out.print(' ');
+                sp = sp+1;
+            }
+            int p =i;
+            int num=1;
+            while(num<=i){
+                // p = num+1;
+                System.out.print(p);
+                num = num+1;
+                p = p+1;
+            }
+           
+            int dec =i-1;
+            while(dec>=1){
+                System.out.print(dec+i-1);
+                dec = dec-1;
+                //i= i+1;
+            }
+            
+            System.out.println();
+            i=i+1;
+            //i = i-1;
+        }
+	}
+}
+
