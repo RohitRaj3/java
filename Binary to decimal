@@ -1,0 +1,36 @@
+Binary to decimal
+
+Given a binary number as an integer N, convert it into decimal and print.
+Sample Input 1 :
+1100
+Sample Output 1 :
+12
+Sample Input 2 :
+111
+Sample Output 2 :
+7
+...........................................................................
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        int ans= 0;
+        int pv =1;
+        while(n!=0){
+            int lv = n%10;
+            ans = ans+pv*lv;
+            n= n/10;
+            pv = pv*2;
+            
+        }
+        System.out.println(ans);
+        
+
+	}
+}
