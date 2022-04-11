@@ -23,36 +23,34 @@ public class Main {
 	public static void main(String[] args) {
         Scanner s = new Scanner (System.in);
     int N = s.nextInt();
-    
+    if(N<=1) return;
     
     int[] a= new int[N];
     for (int i =0; i<N;i++)
     {
         a[i]= s.nextInt();
     }
-    int [] A= new int [N-1];
-
-    for ( int i =0;i<N-1;i++)
+        
+    //int [] A= new int [N-1];
+        int diff = a[1]-a[0];
+     boolean flag = false;
+    for ( int i =1;i<N;i++)
     {
-        if ( a[i]==a[i+1])
+        if ( diff != (a[i]-a[i-1]) )
         {
-            System.out.println("false");
-			return ;
+            flag = true;
+           // System.out.println("false");
+			//return ;
         }
-        A[i]= a[i] -a[i+1];
     }
-    int i =0;
-    while (i<N-2)
-    {
-        if (A[i]<0 && A[i+1]>0)
-        {
+        
+        if(flag==true) {
             System.out.println("false");
-			return ;
         }
-    	i++;
-    }
-   	System.out.println("true");
-
+        else{
+            System.out.println("true");
+        }
+			
 
 }
 }
